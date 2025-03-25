@@ -60,10 +60,10 @@ function Board({xIsNext, squares, onPlay}) {
 
 export default function Game()
 {
-  const xIsNext = currentMove % 2 === 0;
   const [history, setHistory] = useState([Array(9).fill(null)]);
-  const currentSquares = history[currentMove];
   const [currentMove, setCurrentMove] = useState(0);
+  const currentSquares = history[currentMove];
+  const xIsNext = currentMove % 2 === 0;
 
   function handlePlay(nextSqaures)
   {
